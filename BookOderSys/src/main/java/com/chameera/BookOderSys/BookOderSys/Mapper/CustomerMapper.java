@@ -12,4 +12,8 @@ public interface CustomerMapper {
 
 	@Select("select * from customer")
 	List<Customer> findAll();
+	
+      @Insert("INSERT INTO customer(customer_name, password, email) VALUES(#{customer_name},#{password},#{email})")
+	
+	void insertCustmer(Customer customer);
 }
