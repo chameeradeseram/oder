@@ -24,4 +24,17 @@ public class CustomerController {
 		
 	}
 	
+	@PostMapping("/insert")
+	public void createtCustomer(){
+		Customer c=new Customer();
+		c.setCustomer_name("Dinura");
+		c.setEmail("dinura@gmail.com");
+		c.setPassword("123");
+		
+		CustomerMapper.insertCustmer(c);
+		
+		System.out.println("Customer Added");
+		
+	}
+	
 }
